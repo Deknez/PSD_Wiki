@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание уроков | PSD Wiki</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="background-image"></div>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4 welcome-title">Расписание уроков для 1 курса</h1>
+    <div class="col-md-10 offset-md-1">
+        <div class="schedule-day">
+            <h3 data-toggle="collapse" data-target="#monday" style="cursor: pointer;">Понедельник:</h3>
+            <ul id="monday" class="collapse show">
+                <li>Российский (08:30 - 10:00)</li>
+                <li>История Церкви (10:20 - 11:50)</li>
+                <li>Устав Церковный (12:00 - 13:30)</li>
+                <li>Обед</li>
+                <li>Латинский (17:00 - 18:30)</li>
+            </ul>
+        </div>
+
+        <div class="schedule-day">
+            <h3 data-toggle="collapse" data-target="#tuesday" style="cursor: pointer;">Вторник:</h3>
+            <ul id="tuesday" class="collapse">
+                <li>Спев (08:30 - 10:00)</li>
+                <li>Педагогика (10:20 - 11:50)</li>
+                <li>Российский (12:00 - 13:30)</li>
+                <li>Обед</li>
+                <li>Спевка (18:20 - 19:00)</li>
+            </ul>
+        </div>
+
+        <div class="schedule-day">
+            <h3 data-toggle="collapse" data-target="#wednesday" style="cursor: pointer;">Среда:</h3>
+            <ul id="wednesday" class="collapse">
+                <li>Катехизис (08:30 - 10:00)</li>
+                <li>Патрология (10:20 - 11:50)</li>
+                <li>Церковнославянский (12:00 - 13:30)</li>
+                <li>Обед</li>
+                <li>Польский (14:00 - 16:00)</li>
+                <li>Английский (17:30 - 19:00)</li>
+            </ul>
+        </div>
+
+        <div class="schedule-day">
+            <h3 data-toggle="collapse" data-target="#thursday" style="cursor: pointer;">Четверг:</h3>
+            <ul id="thursday" class="collapse">
+                <li>Духовность (08:30 - 10:00)</li>
+                <li>Новый Завет (10:20 - 11:50)</li>
+                <li>Психология (12:00 - 13:30)</li>
+                <li>Обед</li>
+                <li>Грецкий (14:00-15:30)</li>
+            </ul>
+        </div>
+
+        <div class="schedule-day">
+            <h3 data-toggle="collapse" data-target="#friday" style="cursor: pointer;">Пятница:</h3>
+            <ul id="friday" class="collapse">
+                <li>Теология (08:30 - 10:00)</li>
+                <li>Логика (10:20 - 11:50)</li>
+                <li>Старый Завет (12:00 - 13:30)</li>
+                <li>Обед</li>
+                <li>Духовная Практика (14:00 - 15:30)</li>
+            </ul>
+        </div>
+
+    </div>
+    <a href="content.html" class="btn btn-secondary btn-block mt-4">Вернуться</a>
+</div>
+
+</body>
+</html>

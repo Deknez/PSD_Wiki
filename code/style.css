@@ -1,0 +1,134 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../main/image/fon-3.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center center;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card {
+    margin-top: 50px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #333333;
+}
+
+a[href="register.html"] {
+    color: #000000;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+a[href="register.html"]:hover {
+    color: #3E2723;
+    text-decoration: none;
+}
+
+
+
+.welcome-title, .lesson-title {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.special-link {
+    display: inline-block; 
+    margin: 5px; 
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.special-link {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    background-color: #FFD700; 
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.special-link:hover {
+    background-color: #FFC700;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        margin-top: 20px;
+    }
+}
+
+body {
+    background-image: url('../main/image/fon-4.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center center;
+}
+
+.schedule-day {
+    margin-bottom: 30px;
+}
+
+.schedule-day h3 {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.9);  
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.schedule-day ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.schedule-day li {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);  
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
