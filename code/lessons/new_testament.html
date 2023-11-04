@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New_testament Lesson | PSD Wiki</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="lesson-page">
+
+<div class="lesson-container">
+    <div class="lesson-header">
+        <h1>Новый Завет</h1>
+    </div>
+    
+    <div class="lesson-content">
+        <h2>Заголовок</h2>
+        <p> текст  </p>
+        <ul>
+        
+        </ul>
+    </div>
+
+    <div class="lesson-footer">
+        <a href="../content.html" class="btn btn-primary">Вернуться</a>
+    </div>
+</div>
+
+<button id="scrollToTop" class="scrollToTop">↑</button>
+
+<script>
+    const scrollToTopButton = document.getElementById("scrollToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 200) {  
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
+
+    scrollToTopButton.addEventListener("click", () => {
+        window.scrollTo(0, 0);  
+    });
+</script>
+
+</body>
+</html>
