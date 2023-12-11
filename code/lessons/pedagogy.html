@@ -6,6 +6,7 @@
     <title>Pedagogy Lesson | PSD Wiki</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body class="lesson-page">
 
@@ -15,14 +16,17 @@
     </div>
     
     <div class="lesson-content">
-        <h2>Заголовок</h2>
-        <p> текст  </p>
-        <ul>
-        
-        </ul>
+        <textarea id="myTextarea">
+            <h2>Заголовок</h2>
+            <p>Текст...</p>
+            <ul>
+                <!-- Содержимое списка -->
+            </ul>
+        </textarea>
     </div>
 
     <div class="lesson-footer">
+        <button onclick="saveLesson()" class="btn btn-success">Сохранить изменения</button>
         <a href="../content.html" class="btn btn-primary">Вернуться</a>
     </div>
 </div>
@@ -30,8 +34,25 @@
 <button id="scrollToTop" class="scrollToTop">↑</button>
 
 <script>
-    const scrollToTopButton = document.getElementById("scrollToTop");
+    tinymce.init({
+        selector: '#myTextarea'
+    });
 
+    function saveLesson() {
+        fetch('/save-lesson', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title: 'Педагогика',
+                content: tinymce.get('myTextarea').getContent()
+            })
+        })
+        .then(response => response.json())
+        .then(data => alert(data.message))
+        .catch(error => console.error('Error:', error));
+    }
+
+    const scrollToTopButton = document.getElementById("scrollToTop");
     window.addEventListener("scroll", () => {
         if (window.pageYOffset > 200) {  
             scrollToTopButton.style.display = "block";
@@ -39,7 +60,6 @@
             scrollToTopButton.style.display = "none";
         }
     });
-
     scrollToTopButton.addEventListener("click", () => {
         window.scrollTo(0, 0);  
     });

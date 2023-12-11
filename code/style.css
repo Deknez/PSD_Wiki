@@ -1,3 +1,39 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center center;
+    color: #333;
+}
+
+html body.schedule-page {
+    background-image: url('../main/image/fon-4.png');
+}
+
+html body.content-page {
+    background-image: url('../main/image/fon-3.png');
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center center;
+}
+
 .card {
     margin-top: 50px;
     border: 3px solid #000000;
@@ -24,6 +60,12 @@
 
 .btn:hover {
     background-color: #333333;
+}
+
+a[href="register.html"] {
+    color: #000000;
+    text-decoration: underline;
+    transition: color 0.3s;
 }
 
 a[href="register.html"]:hover {
@@ -60,6 +102,30 @@ a[href="register.html"]:hover {
     .card {
         margin-top: 20px;
     }
+}
+
+.schedule-day {
+    margin-bottom: 30px;
+}
+
+.schedule-day h3 {
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.9);  
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.schedule-day ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.schedule-day li {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);  
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .lesson-page {
